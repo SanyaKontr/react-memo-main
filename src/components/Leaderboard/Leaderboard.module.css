@@ -1,0 +1,70 @@
+.leaderboardContainer {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .leaderboard {
+    height: 64px;
+    background-color: #fff;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+  }
+  
+  .leaderboardTitle {
+    position: sticky;
+    top: 0;
+    color: #999;
+    z-index: 1;
+  }
+  
+  .itemContainer {
+    display: flex;
+    gap: 15px;
+    width: 112px;
+    position: relative;
+  }
+  
+  .item {
+    width: 107px;
+  }
+  
+  .itemName {
+    width: 170px;
+    display: block;
+    line-height: 1.2em;
+    max-height: 2.4em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .tooltipHardLevel,
+  .tooltipWithoutSuperPower {
+    position: absolute;
+    z-index: 2;
+    bottom: 40px;
+    left: 0;
+  }
+  
+  .tooltipWithoutSuperPower {
+    left: 40px;
+  }
+  
+  .tooltipHardLevel::after,
+  .tooltipWithoutSuperPower::after {
+    position: absolute;
+    left: 14px;
+    bottom: -10px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 14px solid #c2f5ff;
+  }
