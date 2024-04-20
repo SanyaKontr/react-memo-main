@@ -1,0 +1,116 @@
+.card {
+  width: 95px;
+  height: 133px;
+  border-radius: 4px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 5px solid white;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.cardClosed {
+  cursor: pointer;
+  background-color: #e4fbff;
+}
+
+.cardClosed:hover {
+  opacity: 0.95;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.rank {
+  flex: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  color: #000;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: StratosSkyeng;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.flippedRank {
+  transform: rotate(180deg);
+}
+
+.suit {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rankContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.rankImage {
+  margin-top: 3px;
+  height: 6px;
+}
+
+.suitImage {
+  height: 25px;
+}
+
+/* Анимация переворота */
+/* весь контейнер поддерживает перспективу */
+.flipContainer {
+  perspective: 1000;
+}
+
+.flipContainer:hover .flipper {
+  transition: 0.2s;
+  transform: rotateY(35deg);
+}
+
+.flipContainer.flip .flipper {
+  transform: rotateY(180deg);
+}
+
+.flipContainer,
+.front,
+.back {
+  width: 95px;
+  height: 133px;
+}
+
+/* здесь находится скорость перевертывания */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* скройте обратную сторону во время переворота */
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* обратная, изначально скрытая сторона */
+.back {
+  z-index: 2;
+  transform: rotateY(180deg);
+}

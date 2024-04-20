@@ -1,0 +1,25 @@
+.toolTip {
+  background-color: #c2f5ff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: 25px 20px 20px 20px;
+}
+
+.toolTipTitle,
+.toolTipText {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  color: #004980;
+  line-height: 24px;
+}
+
+.toolTipTitle {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.toolTipText {
+  width: 182px;
+  font-weight: 400;
+}

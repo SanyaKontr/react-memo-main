@@ -1,0 +1,117 @@
+.container {
+  width: 672px;
+  margin: 0 auto;
+  padding: 26px;
+  padding-top: 22px;
+  box-sizing: border-box;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.modalContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #004980c0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 35px;
+}
+
+.timerContainer {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: StratosSkyeng;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.timer {
+  display: flex;
+  align-items: flex-end;
+}
+
+.attempts {
+  font-size: 22px;
+}
+
+.attempts span {
+  color: #ff4545;
+}
+
+.previewText {
+  font-size: 30px;
+  line-height: 30px;
+  margin-top: 34px;
+  margin-bottom: 10px;
+}
+.previewDescription {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.timerValue {
+  text-align: right;
+}
+
+.timerDescription {
+  color: #fff;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: StratosSkyeng;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  margin-bottom: -12px;
+}
+
+.powersContainer {
+  display: flex;
+  gap: 15px;
+}
+
+.toolTipPiphany {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 40vw;
+  top: 13vw;
+  z-index: 1;
+  box-shadow: 0 0 100vh 100vh #00498099;
+  border-radius: 12px;
+}
+
+.toolTipAlohomora {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 45vw;
+  top: 13vw;
+  z-index: 1;
+  box-shadow: 0 0 100vh 100vh #00498099;
+  border-radius: 12px;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
