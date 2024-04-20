@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setEasyMode, setCurrentLevel } from "../../store/slices";
 import { Button } from "../../components/Button/Button";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export function SelectLevelPage() {
   const dispatch = useDispatch();
@@ -59,6 +60,9 @@ export function SelectLevelPage() {
           Легкий режим (3 жизни)
         </label>
         <Button disabled={!choosenLevel} children={"Играть"} onClick={handleStartButton} />
+        <Link className={styles.leaderboardLink} to="/leaderboard">
+          Перейти к лидерборду
+        </Link>
       </div>
     </div>
   );

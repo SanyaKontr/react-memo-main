@@ -15,12 +15,14 @@ export function EndGameModal({
   onClick,
   withoutSuperpowers,
 }) {
-  const [userName, setUserName] = useState("");
+  const [userName, setUserName] = useState(""); // Состояние для хранения введенного имени пользователя
 
+  // Функция для обработки изменений в поле ввода имени
   const handleNameChange = event => {
-    setUserName(event.target.value);
+    setUserName(event.target.value); // Обновляем состояние с введенным именем
   };
 
+  //состояние легкого режима
   const isEasyMode = useSelector(state => state.game.isEasyMode);
 
   function achievements() {
@@ -69,7 +71,7 @@ export function EndGameModal({
 
       <Button onClick={handleAddLeader}>Начать сначала</Button>
       {isLeader ? (
-        <Link className={styles.leaderboardLink} to="/leaderboard" onClick={handleAddLeader}>
+        <Link className={styles.leaderboardLink} to="/leaderboard">
           Перейти к лидерборду
         </Link>
       ) : (
